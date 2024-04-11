@@ -39,9 +39,11 @@ RUN a2enmod php5.6 rewrite headers expires
 ENV APACHE_CONFDIR /etc/apache2
 
 # Mount files
+RUN rm /var/www/html/index.html
+RUN rm /etc/apache2/apache2.conf
+COPY ./config/apache2.conf /etc/apache2/apache2.conf
 COPY ./config/init.sh /init.sh
 COPY --chown=www-data:www-data ./docroot/ /var/www/html/
-RUN rm /var/www/html/index.html
 
 # Fix permissions 
 RUN chmod +x /init.sh
