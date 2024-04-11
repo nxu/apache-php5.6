@@ -1,4 +1,4 @@
-# 🐳 apache-php5.6 docker image
+# [ 🪶 + 🐘 = 🐳 ] apache-php5.6 docker image 
 
 This is a Docker image based on Ubuntu 22.04 with the following services:
 - Apache2 with following modules: mod_php, rewrite, headers, expires
